@@ -1,0 +1,41 @@
+.reactor {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.status-display-panel {
+  border-bottom: solid 1px silver;
+  padding: 10px;
+}
+.status-display-wrapper {
+  font-weight: bold;
+}
+
+.panel {
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+  border-right: solid 1px silver;
+  vertical-align: top;
+  padding: 10px;
+}
+
+.reactor :last-child.panel {
+  border-right-width: 0px;
+}
+
+.engine.spin-slow {
+  animation: engine-spin infinite 20s linear;
+}
+.engine.spin-fast {
+  animation: engine-spin infinite 2s linear;
+}
+.engine.spin-turbo {
+  animation: engine-spin infinite 0.5s linear;
+}
+
+@keyframes engine-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
